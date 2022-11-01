@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  api:
+    image: pty:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8888:8000
+    volumes:
+      - ./api:/app/api
+  vueyt:
+    build: vue-yt
+    ports:
+      - 5173:5173
+      - 3000:3000
+    volumes:
+      - ./vue-yt:/app/vue-yt
