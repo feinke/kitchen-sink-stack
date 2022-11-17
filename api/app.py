@@ -1,7 +1,7 @@
 import os
 
 def main():
-    who = os.environ["INPUT_MYINPUT"]
+    who = os.environ["INPUT_WHO"]
 
     my_output = f"Hello {who}"
 
