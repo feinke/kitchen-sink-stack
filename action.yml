@@ -2,7 +2,7 @@ name: 'hello'
 description: 'greetings'
 inputs:
   who:
-    required: true
+    required: false
     default: 'me'
 outputs:
   myOutput:

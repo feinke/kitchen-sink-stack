@@ -10,4 +10,6 @@ WORKDIR /api
 
 COPY api/main.py main.py
 
+ENV PYTHONPATH /api
+
 CMD ["main.py"]
