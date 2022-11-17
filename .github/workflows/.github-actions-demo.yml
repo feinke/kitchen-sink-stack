@@ -9,7 +9,5 @@ jobs:
       - name: Use Action from root
         uses: ./
         id: theID
-        with:
-          who: 'who dat'
       - name: Get the output
         run: echo 'Output - ${{ steps.theID.outputs.myOutput }}'
