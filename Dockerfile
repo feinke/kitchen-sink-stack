@@ -6,10 +6,10 @@ COPY requirements-base.txt requirements-base.txt
 
 RUN pip3 install -r requirements-base.txt
 
-WORKDIR /api
+COPY api/app.py app.py
 
-COPY api/main.py main.py
+COPY entrypoint.sh /entrypoint.sh
 
-ENV PYTHONPATH /api
+RUN chmod +x entrypoint.sh
 
-CMD ["main.py"]
+ENTRYPOINT ["/entrypoint.sh"]
