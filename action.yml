@@ -1,0 +1,14 @@
+name: 'hello'
+description: 'greetings'
+inputs:
+  who:
+    required: true
+    default: 'me'
+outputs:
+  myOutput:
+    description: 'output from action'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who }}
