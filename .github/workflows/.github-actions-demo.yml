@@ -2,7 +2,7 @@ name: Github Action Demo
 on: [push]
 jobs:
   exploring_job:
-    runs-on: ububtu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
